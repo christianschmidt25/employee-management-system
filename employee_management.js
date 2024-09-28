@@ -13,3 +13,21 @@ class Employee {
         console.log(`${this.name} works as a ${this.position} within the ${this.department} department making $${this.salary} per year.`);
     }
 }
+
+
+// Task 2: Create a Department Class
+// This task will allow employees to be created and assigned within certain divisions.
+
+class Department {
+    constructor(name,employees) {
+        this.name = name;
+        this.employees = [];
+    }
+
+    addEmployee(employee) {
+        this.employees.push(employee); //adds new employee to the Employee class
+    }
+    getDepartmentSalary() {
+        return this.employees.reduce((total, employee) => total + employee.salary, 0); //brings all the employees salaries to one value, as a department total salary.
+    }
+}
