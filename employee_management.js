@@ -60,5 +60,29 @@ Department.prototype.calculateTotalSalaryWithBonus = function() { //goes back to
     }, 0); //start the total salary at 0
 };
     
+// Task 5: Create and Manage Departments and Employees
+// Will create departments and employees and calculates the salaries for each department
 
+const security = new Department('Security');
+const humanResources = new Department('Human Resources');
 
+const sofia = new Employee('Sofia', 250000, 'Secret Service Agent', 'Security');
+const isaac = new Employee('Isaac', 800000, 'Head of Cybersecurity', 'Security');
+const christian = new Manager('Christian', 1000000, 'Chief Security Office', 'Security', 300000);
+const aatish = new Employee('Aatish', 450000, 'Hiring Manager', 'Human Resources');
+const charlotte = new Employee('Charlotte', 400000, 'Customer Relations Manager', 'Human Resources');
+const jolie = new Manager('Jolie', 600000, "People Team Leader", "Human Resources", 150000);
+
+security.addEmployee(sofia);
+security.addEmployee(isaac);
+security.addEmployee(christian);
+humanResources.addEmployee(aatish);
+humanResources.addEmployee(charlotte);
+humanResources.addEmployee(jolie);
+
+console.log(security);
+console.log(humanResources);
+console.log(christian.getDetails());
+console.log(jolie.getDetails());
+console.log(`Security Department Total Salary with Bonuses: $${security.calculateTotalSalaryWithBonus()}.`);
+console.log(`Human Resources Department Total Salary with Bonuses: $${humanResources.calculateTotalSalaryWithBonus()}.`);
