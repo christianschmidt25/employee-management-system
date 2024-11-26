@@ -1,2 +1,2 @@
-# Coding-Challenge-8
-This is the repository for the Coding Challenge 8 assignment in ISM 3232.
+# Employee Management System
+This is an employee management application, using classes to create employees, managers, and departments to assign each employee and manager to their respective departments.
